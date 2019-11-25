@@ -6,14 +6,14 @@ console.log('App.js is running');
 
 const app = {
     title: 'Some title',
-    subtitle: 'Some subtitle',
+    subtitle: 'This is my subtitle',
     options: ['One', 'Two']
 };
 
 const template = (
     <div>
         <h1>{app.title}</h1>
-        {app.subtitle && <p>{app.subtitle}</p>}
+        <p>{app.subtitle}</p>
         <p>{app.options.length > 0 ? 'Here are your options' : 'No options'}</p>
 
         <ol>
@@ -35,14 +35,14 @@ function getLocation(location) {
     }
     return 'unknown';
 }
+let count = 0;
 const templateTwo = (
     <div>
-        <h1>{user.name ? user.name : 'Anonymous'}</h1>
-        {(user.age && user.age > 17) && <p>Age: {user.age}</p>}
-        {getLocation(user.location)}
+        <h1>Count: {count}</h1>
+        <button id="my-id" className="button">+1</button>
     </div>
 );
-
+//console.log(template);
 const appRoot = document.getElementById('app')
 
 ReactDOM.render(template, appRoot);
