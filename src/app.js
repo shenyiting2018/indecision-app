@@ -1,4 +1,4 @@
-console.log('App.js is running');
+console.log('App.js is running!');
 
 // create app object title/subtitle
 // JSX - JavaScript XML

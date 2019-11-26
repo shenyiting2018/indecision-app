@@ -10,7 +10,7 @@ const nameConst = 'Frank';
 console.log('nameConst', nameConst);
 
 //block scopint
-const fullName = 'Erting Shen';
+const fullName = 'Eating Shen';
 let firstName;
 
 if (fullName) {
