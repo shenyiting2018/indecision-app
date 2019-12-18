@@ -40,16 +40,6 @@ export default class IndecisionApp extends React.Component {
             options: prevState.options.concat(option)
         }));
     };
-    constructor(props) {
-        super(props);
-        this.handlePick = this.handlePick.bind(this);
-        this.handleDeleteOptions = this.handleDeleteOptions.bind(this);
-        this.handleAddOption = this.handleAddOption.bind(this);
-        this.handleDeleteOption = this.handleDeleteOption.bind(this);
-        this.state = {
-            options: []
-        };
-    }
 
     componentDidMount() {
         try {
@@ -61,8 +51,7 @@ export default class IndecisionApp extends React.Component {
             }
         } catch (e) {
             //do nothing at all
-        }
-        
+        }       
     }
     componentDidUpdate(prevProps, prevState) {
         if (prevState.options.length !== this.state.options.length) {
@@ -76,12 +65,11 @@ export default class IndecisionApp extends React.Component {
     }
 
     render() {
-        const title = 'Indecision';
         const subtitle = 'Put your life in the hands of a computer';
 
         return (
             <div>
-                <Header />
+                <Header subtitle={subtitle} />
                 <Action 
                     hasOptions={this.state.options.length > 0}
                     handlePick={this.handlePick}
